@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="first-try, my_blog">
-    <meta name="description" content="first-try | my_blog">
+    <meta name="keywords" content="vscode配置R语言, my_blog">
+    <meta name="description" content="vscode配置R语言因为这个学习选修了一门《非参数统计》的课，课程要求使用R语言，由于不想使用Rstudio这个IDE，便萌生了使用vscode配置R语言的想法。
+参考资料：
+
+http://www.huangpan.net/posts/">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>first-try | my_blog</title>
+    <title>vscode配置R语言 | my_blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -285,13 +288,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        first-try
+                        vscode配置R语言
                     </div>
                 </div>
             </div>
@@ -413,7 +416,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-03
+                    2020-07-08
                 </div>
 
                 
@@ -429,7 +432,46 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="vscode配置R语言"><a href="#vscode配置R语言" class="headerlink" title="vscode配置R语言"></a>vscode配置R语言</h1><p>因为这个学习选修了一门《非参数统计》的课，课程要求使用R语言，由于不想使用Rstudio这个IDE，便萌生了使用vscode配置R语言的想法。</p>
+<p>参考资料：</p>
+<blockquote>
+<p><a href="http://www.huangpan.net/posts/ji-ke/2019-05-17-write-r-and-python-by-vscode.html" target="_blank" rel="noopener">http://www.huangpan.net/posts/ji-ke/2019-05-17-write-r-and-python-by-vscode.html</a></p>
+<p><a href="https://sspai.com/post/47386" target="_blank" rel="noopener">https://sspai.com/post/47386</a></p>
+</blockquote>
+<h2 id="安装R"><a href="#安装R" class="headerlink" title="安装R"></a>安装R</h2><p>直接去官网<a href="https://www.r-project.org/" target="_blank" rel="noopener">https://www.r-project.org/</a>下载即可<br>这里我选择了清华源进行下载<a href="https://mirrors.tuna.tsinghua.edu.cn/CRAN/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/CRAN/</a></p>
+<h2 id="安装扩展"><a href="#安装扩展" class="headerlink" title="安装扩展"></a>安装扩展</h2><p>直接在vscode扩展下载即可</p>
+<h3 id="R-support-for-Visual-Studio-Code"><a href="#R-support-for-Visual-Studio-Code" class="headerlink" title="R support for Visual Studio Code"></a>R support for Visual Studio Code</h3><p>  这个插件是 VS Code 中 R 的核心插件，<strong>用来运行R 文件或运行所选行、提供语法高亮、<code>data.frame</code>预览、代码片段支持以及一些R 程序包的开发支持</strong>。例如你可以在编辑器中选择某几行内容，然后使用 <code>CTRL+ENTER</code> 将代码发送到终端执行。</p>
+<h3 id="R-LSP-Client"><a href="#R-LSP-Client" class="headerlink" title="R LSP Client"></a>R LSP Client</h3><p>LSP的缩写为<code>Language Server protocol</code>,LSP 为不同语言在不同编辑器或IDE 中的<strong>自动补全、查找定义、==悬停查看函数文档==</strong>等功能搭建了桥梁，使得开发者可以减少针对不同语言和不同编辑器的重复开发。对用户来说，使用这一功能意味着可以获得更好的自动补全、查看帮助文档等特性。由于LSP 本身也是微软的项目，在VSCode 中的使用体验也会更好一些。R LSP Client 便是R 语言在这方面的实现，通过安装这个插件，可以弥补自动补全等功能的不足。</p>
+<p>插件只是在编辑器一侧提供了实现LSP 的条件，而在R 语言一侧还需要另外的包——<code>languageserver</code>——来完成搭接。在<strong>R 环境</strong>中运行如下安装指令：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; install.packages(<span class="string">"languageserver"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>重启后即可</p>
+<p>下载的二进制程序包在<br>        C:\Users\administered\AppData\Local\Temp\RtmpqAVd2Y\downloaded_packages里</p>
+<p>在vscode设置中搜索r.lsp，在path中填入R.exe所在路径：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\R\R-3.6.3\bin\x64\R.exe</span><br></pre></td></tr></table></figure>
+
+<p>重启<code>vscode</code>即可保存修改，在command palette中输入<code>Reload Window</code>即可</p>
+<h3 id="radian插件"><a href="#radian插件" class="headerlink" title="radian插件"></a>radian插件</h3><p>在网上教程中为<code>rtichoke</code>，而现已更名为<code>radian</code>， 用于美化R console，提供R console代码高亮，自动补全，多行输入的功能。也可以直接在终端中运行R代码。</p>
+<p>在Anaconda中activate，运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -U radian</span><br></pre></td></tr></table></figure>
+
+<p>安装完成即可</p>
+<h3 id="对接vscode和radian"><a href="#对接vscode和radian" class="headerlink" title="对接vscode和radian"></a>对接vscode和radian</h3><p>在<code>vscode</code>的设置中搜索<code>r.rterm</code>，修改<code>r.rterm:Windows</code> 的path为<code>radian.exe</code>所在的路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\administered\Anaconda3\Scripts\radian.exe</span><br></pre></td></tr></table></figure>
+
+
+<p>在<code>r.rterm</code>的<code>option</code>中删除<code>--no-save</code>、<code>--no-restore</code></p>
+<blockquote>
+<p>根据<code>rtichoke</code> 作者的说法，<code>rtichoke</code> 的<code>--no-save</code>和<code>--no-restore</code>已经作为默认选项故而无法再传入</p>
+</blockquote>
+<h3 id="设置R必备快捷键"><a href="#设置R必备快捷键" class="headerlink" title="设置R必备快捷键"></a>设置R必备快捷键</h3><p>在R中<code>Alt</code>+<code>-</code>能输出<code>&lt;-</code>，（两边还各有个空格），在vscode也可设置快捷键得到这个功能</p>
+<p>在keyboard shortcut中打开keybindings.json文件，插入以下代码即可：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"key"</span>: <span class="string">"alt+-"</span>,</span><br><span class="line">    <span class="attr">"command"</span>: <span class="string">"type"</span>,</span><br><span class="line">    <span class="attr">"args"</span>: &#123;</span><br><span class="line">    <span class="attr">"text"</span>: <span class="string">" &lt;- "</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"when"</span>: <span class="string">"editorTextFocus&amp;&amp;editorLangId == 'r'"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+<p>小tips：<br>1、在Anaconda的prompt的base下输入radian可转入R命令行模式<br>2、vscode默认UTF-8编码，点击右下角的UTF-8选择Reopen with Encoding可切换为其他编码如GB2312等</p>
+
             </div>
             <hr/>
 
@@ -463,9 +505,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《first-try》
+                    《vscode配置R语言》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/03/first-try/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/07/08/vscode-pei-zhi-r-yu-yan/" property="cc:attributionName"
                rel="cc:attributionURL">
                 jindong xie
             </a> 采用
@@ -505,9 +547,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/07/08/vscode-pei-zhi-r-yu-yan/">
                     <div class="card-image">
@@ -528,9 +571,9 @@ http://www.huangpan.net/posts/
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-07-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-07-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -539,6 +582,7 @@ http://www.huangpan.net/posts/
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -549,19 +593,19 @@ http://www.huangpan.net/posts/
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/03/hello-world/">
+                <a href="/2019/11/03/first-try/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="first-try">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">first-try</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            
                         
                     </div>
                     <div class="publish-info">

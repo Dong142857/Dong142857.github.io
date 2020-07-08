@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://Dong142857.github.io/"/>
-  <updated>2019-11-03T07:51:35.304Z</updated>
+  <updated>2020-05-04T14:52:56.924Z</updated>
   <id>https://Dong142857.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vscode配置R语言</title>
+    <link href="https://Dong142857.github.io/2020/07/08/vscode-pei-zhi-r-yu-yan/"/>
+    <id>https://Dong142857.github.io/2020/07/08/vscode-pei-zhi-r-yu-yan/</id>
+    <published>2020-07-08T08:07:52.905Z</published>
+    <updated>2020-05-04T14:52:56.924Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;vscode配置R语言&quot;&gt;&lt;a href=&quot;#vscode配置R语言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>first-try</title>
