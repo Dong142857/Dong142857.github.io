@@ -4,11 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="vscode配置R语言, my_blog">
-    <meta name="description" content="vscode配置R语言因为这个学习选修了一门《非参数统计》的课，课程要求使用R语言，由于不想使用Rstudio这个IDE，便萌生了使用vscode配置R语言的想法。
-参考资料：
+    <meta name="keywords" content="简易文件系统设计, my_blog">
+    <meta name="description" content="【操作系统】 简易文件系统这个是本学期最后一次的操作系统实验，个人觉得做得还行，故写篇博客分享一下。
+实验要求
 
-http://www.huangpan.net/posts/">
+创建一个100M的文件或者创建一个100M的共享内存
+
+尝试自行设计一个C语言小程序，使用步骤1分配的100M空间（共享内存或">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +18,7 @@ http://www.huangpan.net/posts/">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>vscode配置R语言 | my_blog</title>
+    <title>简易文件系统设计 | my_blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -288,13 +290,13 @@ http://www.huangpan.net/posts/">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        vscode配置R语言
+                        简易文件系统设计
                     </div>
                 </div>
             </div>
@@ -416,7 +418,7 @@ http://www.huangpan.net/posts/">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-07-08
+                    2021-09-02
                 </div>
 
                 
@@ -432,41 +434,71 @@ http://www.huangpan.net/posts/">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="vscode配置R语言"><a href="#vscode配置R语言" class="headerlink" title="vscode配置R语言"></a>vscode配置R语言</h1><p>因为这个学习选修了一门《非参数统计》的课，课程要求使用R语言，由于不想使用Rstudio这个IDE，便萌生了使用vscode配置R语言的想法。</p>
-<p>参考资料：</p>
-<blockquote>
-<p><a href="http://www.huangpan.net/posts/ji-ke/2019-05-17-write-r-and-python-by-vscode.html" target="_blank" rel="noopener">http://www.huangpan.net/posts/ji-ke/2019-05-17-write-r-and-python-by-vscode.html</a></p>
-<p><a href="https://sspai.com/post/47386" target="_blank" rel="noopener">https://sspai.com/post/47386</a></p>
+                <h1 id="【操作系统】-简易文件系统"><a href="#【操作系统】-简易文件系统" class="headerlink" title="【操作系统】 简易文件系统"></a>【操作系统】 简易文件系统</h1><p>这个是本学期最后一次的操作系统实验，个人觉得做得还行，故写篇博客分享一下。</p>
+<h2 id="实验要求"><a href="#实验要求" class="headerlink" title="实验要求"></a>实验要求</h2><blockquote>
+<ol>
+<li><p>创建一个100M的文件或者创建一个100M的共享内存</p>
+</li>
+<li><p>尝试自行设计一个C语言小程序，使用步骤1分配的100M空间（共享内存或mmap），然后假设这100M空间为一个空白磁盘，设计一个简单的文件系统管理这个空白磁盘，给出文件和目录管理的基本数据结构，并画出文件系统基本结构图，以及基本操作接口。（30分）</p>
+</li>
+<li><p>在步骤1的基础上实现部分文件操作接口操作，创建目录mkdir，删除目录rmdir，修改名称，创建文件open，修改文件，删除文件rm，查看文件系统目录结构ls。（40分）注明：全部在内存中实现</p>
+</li>
+<li><p>参考进程同步的相关章节，通过信号量机制实现多个终端对上述文件系统的互斥访问，系统中的一个文件允许多个进程读，不允许写操作；或者只允许一个写操作，不允许读。（30分）</p>
+</li>
+</ol>
 </blockquote>
-<h2 id="安装R"><a href="#安装R" class="headerlink" title="安装R"></a>安装R</h2><p>直接去官网<a href="https://www.r-project.org/" target="_blank" rel="noopener">https://www.r-project.org/</a>下载即可<br>这里我选择了清华源进行下载<a href="https://mirrors.tuna.tsinghua.edu.cn/CRAN/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/CRAN/</a></p>
-<h2 id="安装扩展"><a href="#安装扩展" class="headerlink" title="安装扩展"></a>安装扩展</h2><p>直接在vscode扩展下载即可</p>
-<h3 id="R-support-for-Visual-Studio-Code"><a href="#R-support-for-Visual-Studio-Code" class="headerlink" title="R support for Visual Studio Code"></a>R support for Visual Studio Code</h3><p>  这个插件是 VS Code 中 R 的核心插件，<strong>用来运行R 文件或运行所选行、提供语法高亮、<code>data.frame</code>预览、代码片段支持以及一些R 程序包的开发支持</strong>。例如你可以在编辑器中选择某几行内容，然后使用 <code>CTRL+ENTER</code> 将代码发送到终端执行。</p>
-<h3 id="R-LSP-Client"><a href="#R-LSP-Client" class="headerlink" title="R LSP Client"></a>R LSP Client</h3><p>LSP的缩写为<code>Language Server protocol</code>,LSP 为不同语言在不同编辑器或IDE 中的<strong>自动补全、查找定义、==悬停查看函数文档==</strong>等功能搭建了桥梁，使得开发者可以减少针对不同语言和不同编辑器的重复开发。对用户来说，使用这一功能意味着可以获得更好的自动补全、查看帮助文档等特性。由于LSP 本身也是微软的项目，在VSCode 中的使用体验也会更好一些。R LSP Client 便是R 语言在这方面的实现，通过安装这个插件，可以弥补自动补全等功能的不足。</p>
-<p>插件只是在编辑器一侧提供了实现LSP 的条件，而在R 语言一侧还需要另外的包——<code>languageserver</code>——来完成搭接。在<strong>R 环境</strong>中运行如下安装指令：</p>
-<pre class=" language-R"><code class="language-R">> install.packages("languageserver")</code></pre>
-<p>重启后即可</p>
-<p>下载的二进制程序包在<br>        C:\Users\administered\AppData\Local\Temp\RtmpqAVd2Y\downloaded_packages里</p>
-<p>在vscode设置中搜索r.lsp，在path中填入R.exe所在路径：</p>
-<pre><code>C:\Program Files\R\R-3.6.3\bin\x64\R.exe</code></pre><p>重启<code>vscode</code>即可保存修改，在command palette中输入<code>Reload Window</code>即可</p>
-<h3 id="radian插件"><a href="#radian插件" class="headerlink" title="radian插件"></a>radian插件</h3><p>在网上教程中为<code>rtichoke</code>，而现已更名为<code>radian</code>， 用于美化R console，提供R console代码高亮，自动补全，多行输入的功能。也可以直接在终端中运行R代码。</p>
-<p>在Anaconda中activate，运行：</p>
-<pre><code>pip install -U radian</code></pre><p>安装完成即可</p>
-<h3 id="对接vscode和radian"><a href="#对接vscode和radian" class="headerlink" title="对接vscode和radian"></a>对接vscode和radian</h3><p>在<code>vscode</code>的设置中搜索<code>r.rterm</code>，修改<code>r.rterm:Windows</code> 的path为<code>radian.exe</code>所在的路径</p>
-<pre><code>C:\Users\administered\Anaconda3\Scripts\radian.exe</code></pre><p>在<code>r.rterm</code>的<code>option</code>中删除<code>--no-save</code>、<code>--no-restore</code></p>
-<blockquote>
-<p>根据<code>rtichoke</code> 作者的说法，<code>rtichoke</code> 的<code>--no-save</code>和<code>--no-restore</code>已经作为默认选项故而无法再传入</p>
-</blockquote>
-<h3 id="设置R必备快捷键"><a href="#设置R必备快捷键" class="headerlink" title="设置R必备快捷键"></a>设置R必备快捷键</h3><p>在R中<code>Alt</code>+<code>-</code>能输出<code>&lt;-</code>，（两边还各有个空格），在vscode也可设置快捷键得到这个功能</p>
-<p>在keyboard shortcut中打开keybindings.json文件，插入以下代码即可：</p>
-<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
-    <span class="token property">"key"</span><span class="token operator">:</span> <span class="token string">"alt+-"</span><span class="token punctuation">,</span>
-    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"type"</span><span class="token punctuation">,</span>
-    <span class="token property">"args"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"text"</span><span class="token operator">:</span> <span class="token string">" &lt;- "</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token property">"when"</span><span class="token operator">:</span> <span class="token string">"editorTextFocus&amp;&amp;editorLangId == 'r'"</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
-<p>小tips：<br>1、在Anaconda的prompt的base下输入radian可转入R命令行模式<br>2、vscode默认UTF-8编码，点击右下角的UTF-8选择Reopen with Encoding可切换为其他编码如GB2312等</p>
+<p>（1）磁盘基本数据结构</p>
+<p>首先申请一段100M的内存空间，将这段内存空间视为我们的磁盘空间，来进行本次实验的磁盘的文件系统管理。这里我一开始是使用malloc操作进行，但在第三部分中需要用到信号量机制，需要进行进程间通信，所以在最后还是使用了共享内存的方式进行。</p>
+<p>使用共享内存的方式参考先前的综合实验1进行。这里申请了100MB空间之后，将得到共享内存ID:shmid，使用shmat将共享内存映射到进程空间中，则使用shared_memory即可访问共享内存。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image002.gif" alt=""></p>
+<p>关于文件系统的结构划分，这里为了尽可能模拟Linux的ext2文件系统，于是采取以下划分，与ext2不同的是，由于一个4KB的数据块，最多表示4<em>1024*8</em>(4*1024) = 128MB的数据空间，而128MB在Linux系统中是远远不够用的，于是在ext2文件系统中，采用了多个块组的形式。而本次实验中，由于我们申请的内存空间仅有100M，于是使用一个块组的形式是足够使用的，于是为了简单起见，本次实验将整个磁盘空间视为一个块组，同时也不需要使用引导块来模拟linux的启动引导功能。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image004.gif" alt=""></p>
+<p>下图展示的是linux中的Ext2文件系统，从下图中可以看出与本次实验的不同之处，在ext2文件系统中，一个块组中含有多个块组描述符，来存放文件系统中各个块组的状态，但是本次实验并不需要，所以本次实验省略块组描述符项。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image006.gif" alt=""></p>
+<p>在文件系统中，超级块存储的是块组中的全局信息，例如空闲inode的个数等，不过这些信息存入在超级块中在本次实验过程中没有体现出其应有的作用，因为我们只用了一个超级块，而超级块在第三部分进程间通信中就体现了其重要之处，我们可以将一些块组全局的信息存储在超级块中，由于超级块是出于我们的“磁盘”的一部分，是共享内存的一部分，于是不同的进程之间可以通过访问超级块来获取块组的一些全局信息，这些信息是重要的。在本次实验中，本来应该将一些其他的静态信息存储入超级块中才能尽可能模拟ext2，但是由于时间关系，这里只存入了必要信息。下图是本次实验中超级块的声明。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image008.gif" alt=""></p>
+<p>注意到这里我使用了一个union联合这个数据结构，使用这个数据结构的原因是因为在ext2文件系统中，由于磁盘的读取是按照一个一个数据块来读取的，超级块是需要占据一个数据块的，为了使超级块所占的内存满足一个数据块的大小，于是将超级块的本身内存作为一个结构体和一个数据块数据结构联合起来，使得超级块真实存储在一个数据块中。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image010.gif" alt=""></p>
+<p>物理数据块设置为一个char结构体，BLOCK_SIZE为4096，也就是占4KB。</p>
+<p>关于数据区和位图，其结构如下图所示，为了简单起见和时间关系，这里采取一个数据块存储一个文件的方式(有时间是可以改成混合索引的方式)，下图中的数据区中，每一个单位为一个数据块，然后位图单独占据一个数据块。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image012.gif" alt=""></p>
+<p>我们使用一个char数组来实现一个bitmap，由于一个char为一个字节8个位，所以一个char是可以表示8个数据块的，于是我们bitmap的行就只要BLOCK_SIZE/8，即可用BLOCK_SIZE个位来表示所有的数据块。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image014.gif" alt=""></p>
+<p>由于在UNIX中万物皆文件，所有文件和目录的存储方式应该是比较相似的，目录和文件之间的关系如下图所示，他们的区别在于目录中的文件区存储的是目录项，而文件中的文件区存储的是数据。目录中的一个目录项位一个文件的FCB，一个FCB就是一个目录项。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image016.gif" alt=""></p>
+<p>而目录和文件的数据结构的定义如下图所示。文件File是由目录区中的FCB和文件区的数据部分组合起来的，然后目录的DirFile是由目录区中的FCB和文件区中的多个FCB项组合而成的。这个定义和上图的逻辑结构是相同的。文件和目录的区别主要在于区每一个记录的类型不一样。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image018.gif" alt=""></p>
+<p>而FCB中按照ext2的定义是由一个文件名和索引结点编号组成。存放的是文件的控制信息，索引结点编号指代的是inode区中的inode编号，如下图所示。一个索引指针指向了inode区中的一个inode项，然后inode项中含有数据区的编号，通过这个编号索引到文件所在的位置。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image020.gif" alt=""></p>
+<p>在inode中存放的是关于文件的一些控制信息，这里我在inode项中定义了四项，分别为文件类型、父结点的inode编号，文件的大小以及数据块的编号。在ext2文件系统中，数据块号这一项是由含15个指针的数组组成的，其中12个为直接索引项，1个一级索引，1个二级索引，1个三级索引，通过这个数组实现的混合索引，但是这里由于时间关系和简单起见，简单的定义一个数据块号中只放有一个文件，也就是我们文件的大小不大于4KB。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image022.gif" alt=""></p>
+<p>关于inode其声明如下图所示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image024.gif" alt=""></p>
+<p>（2）实现基本文件管理操作。</p>
+<p>当磁盘结构规定好之后，就可以进行文件管理操作的编写，首先是mkdir语句，该条语句为在当前目录下新建一个新的目录。那么问题来了，我们的根目录怎么办。我做了一个判断，当没有根目录的时候创建一个。这里则要求我们使用两个变量，当前文件名和当前目录文件指针。</p>
+<p>新建一个目录，需要先查询空闲inode，空闲的状态可以由位图反映出来，这里查询位图分配空间inode的操作如下图所示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image026.gif" alt=""></p>
+<p>这里的操作比较神奇，也是本人在本次实验中的得意之处。按照我们磁盘的划分结构，我们的bitmap是占用了一整个数据块的，所占用的内存是和数据块大小一致的。于是只要得到数据块之间位图的起始位置，就是程序中的位图的指针所指向的位置。所以只要将datablock偏移数据块到位图起始位置，然后将其地址强制类型转化为bitmap类型，就可以用bitmap解释这个数据块。而bitmap由char数组组成(在先前已经提到)，一列为8个字节，需要进行位操作。</p>
+<p>这里将需要判断的位通过右移到第一位，然后和1相与判断这个数的奇偶性，结果就是这个位为1还是0，然后当其为0时，我们要设置位图相应位为1，也就是使用这个位置的inode，这里将1做左移操作，到相应的位后与原位图相或操作，将相应位置为1，最后再返回位在位图中的位置。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image028.gif" alt=""></p>
+<p>同理，对于数据块的位图，也是类似的操作。</p>
+<p>当得到inode的位置之后，要索引到inode区的位置，这里的实现方式如下图所示，同样，由于inode是4个int是16个字节，是4KB的因数，能够充斥所有的数据块，这里同样将inode区的起始指针通过强制类型转化位Inode，用inode解释这个区域，于是inode的位置就可以通过起始位置加指针偏移得到。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image030.gif" alt=""></p>
+<p>同样的，对于数据区的索引，也是同样的方式。</p>
+<p>整个mkdir的实现如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image032.gif" alt=""></p>
+<p>首先是先得到inode位置和数据块位置编号，然后索引到在“磁盘”中的实际位置，然后由于这里新建的是一个目录，所以通过类似的方式，将数据块指针强制类型转化位目录类型指针，用目录来解释这个数据块，然后就可以进行数据块的写入了。当数据块写入完毕之后，在将这个目录的FCB拷贝到当前目录的目录项中，让当前目录项增加一项。</p>
+<p>下面是rmdir的写法：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image034.gif" alt=""></p>
+<p>其中主要的方法为删除目录项，这一项的实现方式如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image036.gif" alt=""></p>
+<p>由于这里目录项的存储方式是无序的，所以这里的删除目录项使用的代替的方式。代替的方式如下图所示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image038.gif" alt=""></p>
+<p>实现这两个主要的函数之后，其他的函数比如ls、ll、touch(新建一个文件)等等都是类似而且比较简单的，出于篇幅限制这里不再展示，并且本次实验我还通过目录这种树型结构实现了简单的cd命令，思路就是当前路径的跳转和转换，不属于实验要求，此处不再展示。</p>
+<p>（3）信号量机制。</p>
+<p>第三部分为实现进程间通信，使得在进行读写操作的时候，按照读写者问题，实现一个写写互斥、读写互斥，读读不互斥的功能。这里按照助教给的方式结合有名信号量实现即可。实现过程如下图所示，其中中间的switch为读入命令之后的函数调用选择。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image040.gif" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Dong142857/CDN/file_lab_image/clip_image042.gif" alt=""></p>
 
             </div>
             <hr/>
@@ -501,9 +533,9 @@ http://www.huangpan.net/posts/">
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《vscode配置R语言》
+                    《简易文件系统设计》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/07/08/vscode-pei-zhi-r-yu-yan/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/09/02/jian-yi-wen-jian-xi-tong-she-ji/" property="cc:attributionName"
                rel="cc:attributionURL">
                 jindong xie
             </a> 采用
@@ -543,9 +575,10 @@ http://www.huangpan.net/posts/">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/09/02/jian-yi-wen-jian-xi-tong-she-ji/">
                     <div class="card-image">
@@ -568,9 +601,9 @@ http://www.huangpan.net/posts/">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-09-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-09-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -579,6 +612,7 @@ http://www.huangpan.net/posts/">
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -589,24 +623,27 @@ http://www.huangpan.net/posts/">
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/03/first-try/">
+                <a href="/2020/07/08/vscode-pei-zhi-r-yu-yan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="first-try">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="vscode配置R语言">
                         
-                        <span class="card-title">first-try</span>
+                        <span class="card-title">vscode配置R语言</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            vscode配置R语言因为这个学习选修了一门《非参数统计》的课，课程要求使用R语言，由于不想使用Rstudio这个IDE，便萌生了使用vscode配置R语言的想法。
+参考资料：
+
+http://www.huangpan.net/posts/
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-03
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-07-08
                             </span>
                         <span class="publish-author">
                             
